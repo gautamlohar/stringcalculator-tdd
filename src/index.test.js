@@ -19,6 +19,11 @@ test('should return sum of multiple numbers by add function if string contains m
 test('should return sum of multiple numbers if string contains multiple characters seperated by comma or \n', () => {
     expect(add("1\n2,3")).toBe(6);
 });
+
 test('should return sum of multiple numbers if string contains multiple chars seperated by different delimeters', () => {
     expect(add("//;\n1;2")).toBe(3);
+});
+
+test('should throw an error for negative numbers if passed to add function', () => {
+    expect(add("1,-2")).toThrow('negative numbers not allowed -2');
 });
