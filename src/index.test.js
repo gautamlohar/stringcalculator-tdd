@@ -12,6 +12,10 @@ test('should return the sum of two numbers by add function when the input string
     expect(add("1,2")).toBe(3);
 });
 
-test('should return sum of multiple nos by add function if string contains multiple chars seperated by comma', () => {
+test('should return sum of multiple numbers by add function if string contains multiple chars seperated by comma', () => {
     expect(add("3,4,5,6")).toBe(18);
+});
+
+test('should return sum of multiple numbers if string contains multiple characters seperated by comma or \n', () => {
+    expect(add("1\n2,3")).toBe(6);
 });
