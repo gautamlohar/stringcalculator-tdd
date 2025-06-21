@@ -1,6 +1,5 @@
 const add = (str) => {
-    if (str.length === 0) return 0;
-     else return parseInt(str);
+    return str.split(',').map(Number).reduce((total, num) => total + num, 0);
 }
 
 module.exports = add;
