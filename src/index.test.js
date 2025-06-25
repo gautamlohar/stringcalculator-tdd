@@ -27,3 +27,7 @@ test('should return sum of multiple numbers if string contains multiple chars se
 test('should throw an error for negative numbers if passed to add function', () => {
     expect(() => add("1,-2")).toThrow('negative numbers not allowed -2');
 });
+
+test('should return multiplication of numbers if string contains asterisk delimeter', () => {
+    expect(add("//*\n3*2")).toBe(6);
+})
